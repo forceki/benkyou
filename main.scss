@@ -7,7 +7,7 @@
 
 $primary:rgba(255,255,255,.3);
 $background:linear-gradient(to right bottom,rgba(255,255,255,0.6),rgba(255,255,255,0));
-$radius:20px;
+$heigh:581px;
 $medium:1000px;
 $small:600px;
 
@@ -16,16 +16,22 @@ body{
     background-size:1400px;
     background-repeat: no-repeat;
     background-position-y:-100px;
-    overflow:hidden;
+        // overflow:hidden;
 }
    
 
 div.contains{
-    margin:50px 50px;
-    height:580px;
+    
+    height:100%;
     background-image:$background;
     backdrop-filter:blur(5px); 
-    z-index:20;}
+    
+    @media screen and (max-width: $small) {
+        height:100vh;
+        margin:0;
+        border-radius: 0;
+    }
+    }
 
 nav{
     box-shadow: 0 4px 10px -2px rgba(0,0,0,.5);
@@ -47,25 +53,25 @@ nav{
     }
 }
 
-div.all-conten{
-    height:500px;
-}
+
 
 div.home{
     .conten-home{
         justify-content:center;
         align-items: center;
-        height:500px;
+        height:$heigh;
     }
 }
 
 div.kanji{
+    height: $heigh;
      .conten-kanji{
-         position:absolute;
-         top:30px;
-         right:0;
-         left:0;
-         bottom:20px;
+        position:absolute;
+        top:30px;
+        right:0;
+        left:0;
+        bottom:10px;
+         height:$heigh;
          flex-wrap: wrap;
          div{
              margin:10px;
@@ -82,6 +88,7 @@ div.kanji{
 
 
 div.vocab{
+    height: $heigh;
     .conten-vocab{
         position:absolute;
         top:30px;
@@ -124,7 +131,7 @@ div.partikel{
     .conten-partikel{
         .conten-kiri{
             width:27%;
-            height:500px;
+            height:$heigh;
             overflow-y:scroll;
             &::-webkit-scrollbar-track{
                 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
@@ -170,17 +177,26 @@ div.partikel{
 footer{
     text-align: center;
     width:100%;
+    background-color:rgba(255,255,255,0.6);
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.7);
+     p{
+         padding:10px;
+     }
+    @media screen and (max-width: $small) {    
+        padding:10px 0;
+    }
 }
 
 
 
 div.com{
     position: relative;
-    height:500px;
+    height: $heigh;
     justify-content: center;
     align-items: center;
     background-color:rgba(0,0,0,.5);
     backdrop-filter:blur(1px);
+    z-index:10;
     h1{
         color:white;
     }
