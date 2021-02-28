@@ -12,8 +12,13 @@ body {
   overflow: hidden;
 }
 
+@media screen and (max-width: 1000px) {
+  body {
+    overflow: scroll;
+  }
+}
+
 div.contains {
-  height: 100%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
   -webkit-backdrop-filter: blur(5px);
@@ -61,11 +66,11 @@ div.home .conten-home {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 619px;
+  height: 550px;
 }
 
 div.kanji {
-  height: 619px;
+  height: 550px;
 }
 
 div.kanji .conten-kanji {
@@ -74,7 +79,7 @@ div.kanji .conten-kanji {
   right: 0;
   left: 0;
   bottom: 10px;
-  height: 619px;
+  height: 550px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -96,7 +101,7 @@ div.kanji .conten-kanji div h1 {
 }
 
 div.vocab {
-  height: 619px;
+  height: 550px;
 }
 
 div.vocab .conten-vocab {
@@ -154,7 +159,7 @@ div.vocab .conten-vocab div p {
 
 div.partikel .conten-partikel .conten-kiri {
   width: 27%;
-  height: 619px;
+  height: 550px;
   overflow-y: scroll;
 }
 
@@ -220,12 +225,7 @@ footer {
   text-align: center;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6);
-  -webkit-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.7);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 footer p {
@@ -234,13 +234,13 @@ footer p {
 
 @media screen and (max-width: 600px) {
   footer {
-    padding: 10px 0;
+    padding: 4.7px 0;
   }
 }
 
 div.com {
   position: relative;
-  height: 619px;
+  height: 550px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

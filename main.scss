@@ -7,7 +7,7 @@
 
 $primary:rgba(255,255,255,.3);
 $background:linear-gradient(to right bottom,rgba(255,255,255,0.6),rgba(255,255,255,0));
-$heigh:619px;
+$heigh:550px;
 $medium:1000px;
 $small:600px;
 
@@ -16,12 +16,15 @@ body{
      background-repeat: no-repeat;
      background-size:1366px;
         overflow:hidden;
+        @media screen and (max-width: $medium) {
+            overflow:scroll;
+        }
 }
    
 
 div.contains{
     
-    height:100%;
+    
     background-image:$background;
     backdrop-filter:blur(5px); 
     
@@ -177,16 +180,12 @@ footer{
     text-align: center;
     width:100%;
     background-color:rgba(255,255,255,0.6);
-    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.7);
-    position:fixed;
-    bottom:0;
-    left:0;
-    padding:10px 0;
+    padding:8px 0;
      p{
          padding:10px;
      }
     @media screen and (max-width: $small) {    
-        padding:10px 0;
+        padding:4.7px 0;
         
     }
 }
@@ -195,7 +194,7 @@ footer{
 
 div.com{
     position: relative;
-    height: $heigh;
+    height:$heigh;
     justify-content: center;
     align-items: center;
     background-color:rgba(0,0,0,.5);
