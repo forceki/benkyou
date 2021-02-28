@@ -6,10 +6,10 @@
 }
 
 body {
-  background: url(back.png);
-  background-size: 1400px;
+  background-image: url(anime.png);
   background-repeat: no-repeat;
-  background-position-y: -100px;
+  background-size: 1366px;
+  overflow: hidden;
 }
 
 div.contains {
@@ -61,11 +61,11 @@ div.home .conten-home {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 581px;
+  height: 619px;
 }
 
 div.kanji {
-  height: 581px;
+  height: 619px;
 }
 
 div.kanji .conten-kanji {
@@ -74,7 +74,7 @@ div.kanji .conten-kanji {
   right: 0;
   left: 0;
   bottom: 10px;
-  height: 581px;
+  height: 619px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -96,7 +96,7 @@ div.kanji .conten-kanji div h1 {
 }
 
 div.vocab {
-  height: 581px;
+  height: 619px;
 }
 
 div.vocab .conten-vocab {
@@ -154,7 +154,7 @@ div.vocab .conten-vocab div p {
 
 div.partikel .conten-partikel .conten-kiri {
   width: 27%;
-  height: 581px;
+  height: 619px;
   overflow-y: scroll;
 }
 
@@ -222,6 +222,10 @@ footer {
   background-color: rgba(255, 255, 255, 0.6);
   -webkit-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.7);
           box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
 }
 
 footer p {
@@ -236,7 +240,7 @@ footer p {
 
 div.com {
   position: relative;
-  height: 581px;
+  height: 619px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
