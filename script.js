@@ -24,4 +24,6 @@ $(document).ready(function(){
 		$('#home').addClass('none');
 		$('#vocab').addClass('none');
 	});
+
+	
 });

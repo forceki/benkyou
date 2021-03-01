@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    // border:solid 1px red;
+  
 }
 
 $primary:rgba(255,255,255,.3);
@@ -23,13 +23,19 @@ body{
    
 
 div.contains{
-    
-    
     background-image:$background;
-    backdrop-filter:blur(5px); 
-    
+    &::before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        backdrop-filter:blur(5px);
+        z-index:-1;
+    }
     @media screen and (max-width: $small) {
-        height:100vh;
+        height:655px;
         margin:0;
         border-radius: 0;
     }
@@ -69,7 +75,7 @@ div.kanji{
     height: $heigh;
      .conten-kanji{
         position:absolute;
-        top:30px;
+        top:0;
         right:0;
         left:0;
         bottom:10px;
@@ -180,12 +186,12 @@ footer{
     text-align: center;
     width:100%;
     background-color:rgba(255,255,255,0.6);
-    padding:8px 0;
+    padding:5px 0;
      p{
          padding:10px;
      }
     @media screen and (max-width: $small) {    
-        padding:4.7px 0;
+        padding:0 0;
         
     }
 }
